@@ -9,8 +9,10 @@ html, body {
 
 #sun {
     position: absolute;
-    /* Positions the top-left corner of the image to be *
+
+    /* Positions the top-left corner of the image to be */
     /* in the middle of the box */
+
     top: 50%;
     left: 50%;
 
@@ -18,7 +20,7 @@ html, body {
     border-radius: 50%;
     box-shadow: 0 0 512px yellow;
 
-    /* Play with these numbers to see what it does */
+    /* Sun sizing */
     height: 30vmin;
     width: 30vmin;
     margin-top: -15vmin;
@@ -26,7 +28,7 @@ html, body {
 }
 
 #earth {
-    /* Style your earth */
+    /* Style earth */
     position: absolute;
     top: 15%;
     left: 15%;
@@ -51,7 +53,6 @@ html, body {
 }
 
 #earth-orbit {
-    /* For Section #2 */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -86,7 +87,7 @@ html, body {
 }
 
 #moon {
-    /* Style your earth */
+    /* Style Earth's moon */
     position: absolute;
     top: 15%;
     left: 15%;
@@ -102,7 +103,6 @@ html, body {
 }
 
 #moon-orbit {
-    /* For Section #2 */
     position: absolute;
     top: 15%;
     left: 15%;
