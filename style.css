@@ -18,13 +18,16 @@ html, body {
 
     border: orange 1vmin solid;
     border-radius: 50%;
-    box-shadow: 0 0 512px yellow;
+    box-shadow: 0 0 384px yellow;
 
     /* Sun sizing */
     height: 30vmin;
     width: 30vmin;
     margin-top: -15vmin;
     margin-left: -15vmin;
+
+    animation: sun-glow 7s linear infinite;
+    -webkit-animation: sun-glow 7s linear infinite;
 }
 
 #earth {
@@ -57,10 +60,10 @@ html, body {
     top: 50%;
     left: 50%;
 
-    width: 80vmin;
-    height: 80vmin;
-    margin-top: -40vmin;
-    margin-left: -40vmin;
+    width: 70vmin;
+    height: 70vmin;
+    margin-top: -35vmin;
+    margin-left: -35vmin;
 
     -webkit-animation: spin-right 260s linear infinite;
     -moz-animation: spin-right 260s linear infinite;
@@ -77,10 +80,10 @@ html, body {
     top: 50%;
     left: 50%;
 
-    width: 80vmin;
-    height: 80vmin;
-    margin-top: -40vmin;
-    margin-left: -40vmin;
+    width: 70vmin;
+    height: 70vmin;
+    margin-top: -35vmin;
+    margin-left: -35vmin;
 
     border: 3px dotted white;
     border-radius: 50%;
@@ -107,10 +110,10 @@ html, body {
     top: 15%;
     left: 15%;
 
-    width: 30vmin;
-    height: 30vmin;
-    margin-top: -15vmin;
-    margin-left: -15vmin;
+    width: 20vmin;
+    height: 20vmin;
+    margin-top: -10vmin;
+    margin-left: -10vmin;
 
     -webkit-animation: spin-right 20s linear infinite;
     -moz-animation: spin-right 20s linear infinite;
@@ -127,10 +130,10 @@ html, body {
     top: 15%;
     left: 15%;
 
-    width: 30vmin;
-    height: 30vmin;
-    margin-top: -15vmin;
-    margin-left: -15vmin;
+    width: 20vmin;
+    height: 20vmin;
+    margin-top: -10vmin;
+    margin-left: -10vmin;
 
     border: 2px dotted white;
     border-radius: 50%;
@@ -153,5 +156,23 @@ html, body {
         -ms-transform: rotate(360deg);
         -o-transform: rotate(360deg);
         transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes sun-glow {
+    50% {
+        box-shadow: 0 0 256px gold;
+    }
+    100% {
+        box-shadow: 0 0 384px yellow;
+    }
+}
+
+@keyframes sun-glow {
+    50% {
+        box-shadow: 0 0 256px gold;
+    }
+    100% {
+        box-shadow: 0 0 384px yellow;
     }
 }
