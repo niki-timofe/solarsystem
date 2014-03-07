@@ -82,7 +82,7 @@ html, body {
   position: absolute;
   top: 15%;
   left: 15%;
-  border: gray 0.2 vmin solid;
+  border: gray 0.2vmin solid;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 32px 6px gray;
   -moz-box-shadow: 0 0 32px 6px gray;
