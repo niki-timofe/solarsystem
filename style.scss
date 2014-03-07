@@ -1,0 +1,167 @@
+@mixin animation($opts) {
+  -webkit-animation: $opts;
+  -moz-animation: $opts;
+  -ms-animation: $opts;
+  -o-animation: $opts;
+  animation: $opts;
+}
+
+@mixin box-shadow($opts) {
+  -webkit-box-shadow: $opts;
+  -moz-box-shadow: $opts;
+  -ms-box-shadow: $opts;
+  -o-box-shadow: $opts;
+  box-shadow: $opts;
+}
+
+@mixin animation-direction($direction) {
+  -webkit-animation-direction: $direction;
+  -moz-animation-direction: $direction;
+  -ms-animation-direction: $direction;
+  -o-animation-direction: $direction;
+  animation-direction: $direction;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin radius($value) {
+  width: $value;
+  height: $value;
+
+  margin-top: -$value / 2;
+  margin-left: -$value / 2;
+}
+
+html, body {
+  /* The universe takes up all available space */
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  /* The universe is black */
+  background-color: black;
+}
+
+#sun {
+  position: absolute;
+
+  /* Positions the top-left corner of the image to be */
+  /* in the middle of the box */
+  top: 50%;
+  left: 50%;
+
+  border: 0.5vmin solid orange;
+  border-radius: 50%;
+  @include box-shadow(0 0 384px 18px yellow);
+
+  /* Sun sizing */
+  @include radius(30vmin);
+
+  @include animation(sun-glow 5s linear infinite);
+}
+
+#earth {
+  /* Style earth */
+  position: absolute;
+  top: 15%;
+  left: 15%;
+
+  border: blue 1px solid;
+  border-radius: 50%;
+  @include box-shadow(0 0 32px 1px blue);
+
+  @include radius(7.3vmin);
+
+  @include animation(spin-right 0.6s linear infinite);
+
+}
+
+#earth-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  @include radius(70vmin);
+
+  @include animation(spin-right 260s linear infinite reverse);
+}
+
+#earth-trajectory {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  @include radius(70vmin);
+
+  border: 3px dotted white;
+  border-radius: 50%;
+}
+
+#moon {
+  /* Style Earth's moon */
+  position: absolute;
+  top: 15%;
+  left: 15%;
+
+  border: gray 0.2 vmin solid;
+  border-radius: 50%;
+  @include box-shadow(0 0 32px 6px gray);
+
+  @include radius(2vmin);
+}
+
+#moon-orbit {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+
+  @include radius(20vmin);
+
+  @include animation(spin-right 20s linear infinite);
+  @include animation-direction(reverse);
+}
+
+#moon-trajectory {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+
+  @include radius(20vmin);
+
+  border: 2px dotted white;
+  border-radius: 50%;
+}
+
+@include keyframes(spin-right) {
+  //noinspection SassScssUnresolvedFunction
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@include keyframes(sun-glow) {
+  50% {
+    box-shadow: 0 0 256px 20px gold;
+  }
+  100% {
+    box-shadow: 0 0 384px 18px yellow;
+  }
+}

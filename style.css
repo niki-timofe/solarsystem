@@ -1,178 +1,185 @@
 html, body {
-    /* The universe takes up all available space */
-    width: 100%;
-    height: 100%;
-
-    /* The universe is black */
-    background-color: black;
-}
+  /* The universe takes up all available space */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* The universe is black */
+  background-color: black; }
 
 #sun {
-    position: absolute;
-
-    /* Positions the top-left corner of the image to be */
-    /* in the middle of the box */
-
-    top: 50%;
-    left: 50%;
-
-    border: orange 1vmin solid;
-    border-radius: 50%;
-    box-shadow: 0 0 384px yellow;
-
-    /* Sun sizing */
-    height: 30vmin;
-    width: 30vmin;
-    margin-top: -15vmin;
-    margin-left: -15vmin;
-
-    animation: sun-glow 7s linear infinite;
-    -webkit-animation: sun-glow 7s linear infinite;
-}
+  position: absolute;
+  /* Positions the top-left corner of the image to be */
+  /* in the middle of the box */
+  top: 50%;
+  left: 50%;
+  border: 0.5vmin solid orange;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 384px 18px yellow;
+  -moz-box-shadow: 0 0 384px 18px yellow;
+  -ms-box-shadow: 0 0 384px 18px yellow;
+  -o-box-shadow: 0 0 384px 18px yellow;
+  box-shadow: 0 0 384px 18px yellow;
+  /* Sun sizing */
+  width: 30vmin;
+  height: 30vmin;
+  margin-top: -15vmin;
+  margin-left: -15vmin;
+  -webkit-animation: sun-glow 5s linear infinite;
+  -moz-animation: sun-glow 5s linear infinite;
+  -ms-animation: sun-glow 5s linear infinite;
+  -o-animation: sun-glow 5s linear infinite;
+  animation: sun-glow 5s linear infinite; }
 
 #earth {
-    /* Style earth */
-    position: absolute;
-    top: 15%;
-    left: 15%;
-
-    border: blue 1px solid;
-    border-radius: 50%;
-    box-shadow: 0 0 64px blue;
-
-    height: 7.3vmin;
-    width: 7.3vmin;
-    margin-left: -3.6vmin;
-    margin-top: -3.6vmin;
-
-    -webkit-animation: spin-right 0.6s linear infinite;
-    -moz-animation: spin-right 0.6s linear infinite;
-    -ms-animation: spin-right 0.6s linear infinite;
-    -o-animation: spin-right 0.6s linear infinite;
-    animation: spin-right 0.6s linear infinite;
-
-    animation-direction: reverse;
-    -webkit-animation-direction: reverse;
-}
+  /* Style earth */
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  border: blue 1px solid;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 32px 1px blue;
+  -moz-box-shadow: 0 0 32px 1px blue;
+  -ms-box-shadow: 0 0 32px 1px blue;
+  -o-box-shadow: 0 0 32px 1px blue;
+  box-shadow: 0 0 32px 1px blue;
+  width: 7.3vmin;
+  height: 7.3vmin;
+  margin-top: -3.65vmin;
+  margin-left: -3.65vmin;
+  -webkit-animation: spin-right 0.6s linear infinite;
+  -moz-animation: spin-right 0.6s linear infinite;
+  -ms-animation: spin-right 0.6s linear infinite;
+  -o-animation: spin-right 0.6s linear infinite;
+  animation: spin-right 0.6s linear infinite; }
 
 #earth-orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70vmin;
+  height: 70vmin;
+  margin-top: -35vmin;
+  margin-left: -35vmin;
+  -webkit-animation: spin-right 260s linear infinite reverse;
+  -moz-animation: spin-right 260s linear infinite reverse;
+  -ms-animation: spin-right 260s linear infinite reverse;
+  -o-animation: spin-right 260s linear infinite reverse;
+  animation: spin-right 260s linear infinite reverse; }
 
-    width: 70vmin;
-    height: 70vmin;
-    margin-top: -35vmin;
-    margin-left: -35vmin;
-
-    -webkit-animation: spin-right 260s linear infinite;
-    -moz-animation: spin-right 260s linear infinite;
-    -ms-animation: spin-right 260s linear infinite;
-    -o-animation: spin-right 260s linear infinite;
-    animation: spin-right 260s linear infinite;
-
-    animation-direction: reverse;
-    -webkit-animation-direction: reverse;
-}
-
-#earth-trajectory{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 70vmin;
-    height: 70vmin;
-    margin-top: -35vmin;
-    margin-left: -35vmin;
-
-    border: 3px dotted white;
-    border-radius: 50%;
-}
+#earth-trajectory {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70vmin;
+  height: 70vmin;
+  margin-top: -35vmin;
+  margin-left: -35vmin;
+  border: 3px dotted white;
+  border-radius: 50%; }
 
 #moon {
-    /* Style Earth's moon */
-    position: absolute;
-    top: 15%;
-    left: 15%;
-
-    border: gray 0.2vmin solid;
-    border-radius: 50%;
-    box-shadow: 0 0 32px gray;
-
-    height: 2vmin;
-    width: 2vmin;
-    margin-left: -1vmin;
-    margin-top: -1vmin;
-}
+  /* Style Earth's moon */
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  border: gray 0.2 vmin solid;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 32px 6px gray;
+  -moz-box-shadow: 0 0 32px 6px gray;
+  -ms-box-shadow: 0 0 32px 6px gray;
+  -o-box-shadow: 0 0 32px 6px gray;
+  box-shadow: 0 0 32px 6px gray;
+  width: 2vmin;
+  height: 2vmin;
+  margin-top: -1vmin;
+  margin-left: -1vmin; }
 
 #moon-orbit {
-    position: absolute;
-    top: 15%;
-    left: 15%;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 20vmin;
+  height: 20vmin;
+  margin-top: -10vmin;
+  margin-left: -10vmin;
+  -webkit-animation: spin-right 20s linear infinite;
+  -moz-animation: spin-right 20s linear infinite;
+  -ms-animation: spin-right 20s linear infinite;
+  -o-animation: spin-right 20s linear infinite;
+  animation: spin-right 20s linear infinite;
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  -ms-animation-direction: reverse;
+  -o-animation-direction: reverse;
+  animation-direction: reverse; }
 
-    width: 20vmin;
-    height: 20vmin;
-    margin-top: -10vmin;
-    margin-left: -10vmin;
-
-    -webkit-animation: spin-right 20s linear infinite;
-    -moz-animation: spin-right 20s linear infinite;
-    -ms-animation: spin-right 20s linear infinite;
-    -o-animation: spin-right 20s linear infinite;
-    animation: spin-right 20s linear infinite;
-
-    animation-direction: reverse;
-    -webkit-animation-direction: reverse;
-}
-
-#moon-trajectory{
-    position: absolute;
-    top: 15%;
-    left: 15%;
-
-    width: 20vmin;
-    height: 20vmin;
-    margin-top: -10vmin;
-    margin-left: -10vmin;
-
-    border: 2px dotted white;
-    border-radius: 50%;
-}
+#moon-trajectory {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 20vmin;
+  height: 20vmin;
+  margin-top: -10vmin;
+  margin-left: -10vmin;
+  border: 2px dotted white;
+  border-radius: 50%; }
 
 @-webkit-keyframes spin-right {
-    100% {
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-moz-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-ms-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 @keyframes spin-right {
-    100% {
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 @-webkit-keyframes sun-glow {
-    50% {
-        box-shadow: 0 0 256px gold;
-    }
-    100% {
-        box-shadow: 0 0 384px yellow;
-    }
-}
+  50% {
+    box-shadow: 0 0 256px 20px gold; }
+
+  100% {
+    box-shadow: 0 0 384px 18px yellow; } }
+
+@-moz-keyframes sun-glow {
+  50% {
+    box-shadow: 0 0 256px 20px gold; }
+
+  100% {
+    box-shadow: 0 0 384px 18px yellow; } }
+
+@-ms-keyframes sun-glow {
+  50% {
+    box-shadow: 0 0 256px 20px gold; }
+
+  100% {
+    box-shadow: 0 0 384px 18px yellow; } }
 
 @keyframes sun-glow {
-    50% {
-        box-shadow: 0 0 256px gold;
-    }
-    100% {
-        box-shadow: 0 0 384px yellow;
-    }
-}
+  50% {
+    box-shadow: 0 0 256px 20px gold; }
+
+  100% {
+    box-shadow: 0 0 384px 18px yellow; } }
