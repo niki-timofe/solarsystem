@@ -122,6 +122,8 @@ html, body {
   @include box-shadow(0 0 32px 6px gray);
 
   @include radius(2vmin);
+
+  @include animation(moon-eclipse 20s linear infinite);
 }
 
 #moon-orbit {
@@ -147,7 +149,6 @@ html, body {
 }
 
 @include keyframes(spin-right) {
-  //noinspection SassScssUnresolvedFunction
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -163,5 +164,20 @@ html, body {
   }
   100% {
     box-shadow: 0 0 384px 18px yellow;
+  }
+}
+
+@include keyframes(moon-eclipse) {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 100;
+  }
+  90% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
   }
 }
