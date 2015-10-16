@@ -14,11 +14,11 @@ html, body {
   left: 50%;
   border: 0.5vmin solid orange;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 384px 18px yellow;
-  -moz-box-shadow: 0 0 384px 18px yellow;
-  -ms-box-shadow: 0 0 384px 18px yellow;
-  -o-box-shadow: 0 0 384px 18px yellow;
-  box-shadow: 0 0 384px 18px yellow;
+  -webkit-box-shadow: 0 0 60vmin 0.8vmin yellow;
+  -moz-box-shadow: 0 0 60vmin 0.8vmin yellow;
+  -ms-box-shadow: 0 0 60vmin 0.8vmin yellow;
+  -o-box-shadow: 0 0 60vmin 0.8vmin yellow;
+  box-shadow: 0 0 60vmin 0.8vmin yellow;
   /* Sun sizing */
   width: 30vmin;
   height: 30vmin;
@@ -82,6 +82,7 @@ html, body {
   position: absolute;
   top: 15%;
   left: 15%;
+  opacity: 0;
   border: gray 0.2vmin solid;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 32px 6px gray;
@@ -98,6 +99,19 @@ html, body {
   -ms-animation: moon-eclipse 20s linear infinite;
   -o-animation: moon-eclipse 20s linear infinite;
   animation: moon-eclipse 20s linear infinite; }
+
+#dark-moon {
+  /* Style Earth's moon */
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  opacity: 100;
+  border: black 0.2vmin solid;
+  border-radius: 50%;
+  width: 2vmin;
+  height: 2vmin;
+  margin-top: -1vmin;
+  margin-left: -1vmin; }
 
 #moon-orbit {
   position: absolute;
@@ -159,59 +173,59 @@ html, body {
     transform: rotate(360deg); } }
 @-webkit-keyframes sun-glow {
   50% {
-    box-shadow: 0 0 256px 20px gold; }
+    box-shadow: 0 0 40vmin 1vmin gold; }
   100% {
-    box-shadow: 0 0 384px 18px yellow; } }
+    box-shadow: 0 0 60vmin 0.8vmin yellow; } }
 @-moz-keyframes sun-glow {
   50% {
-    box-shadow: 0 0 256px 20px gold; }
+    box-shadow: 0 0 40vmin 1vmin gold; }
   100% {
-    box-shadow: 0 0 384px 18px yellow; } }
+    box-shadow: 0 0 60vmin 0.8vmin yellow; } }
 @-ms-keyframes sun-glow {
   50% {
-    box-shadow: 0 0 256px 20px gold; }
+    box-shadow: 0 0 40vmin 1vmin gold; }
   100% {
-    box-shadow: 0 0 384px 18px yellow; } }
+    box-shadow: 0 0 60vmin 0.8vmin yellow; } }
 @keyframes sun-glow {
   50% {
-    box-shadow: 0 0 256px 20px gold; }
+    box-shadow: 0 0 40vmin 1vmin gold; }
   100% {
-    box-shadow: 0 0 384px 18px yellow; } }
+    box-shadow: 0 0 60vmin 0.8vmin yellow; } }
 @-webkit-keyframes moon-eclipse {
-  0% {
+  7% {
     opacity: 0; }
   10% {
     opacity: 100; }
   90% {
     opacity: 100; }
-  100% {
+  93% {
     opacity: 0; } }
 @-moz-keyframes moon-eclipse {
-  0% {
+  7% {
     opacity: 0; }
   10% {
     opacity: 100; }
   90% {
     opacity: 100; }
-  100% {
+  93% {
     opacity: 0; } }
 @-ms-keyframes moon-eclipse {
-  0% {
+  7% {
     opacity: 0; }
   10% {
     opacity: 100; }
   90% {
     opacity: 100; }
-  100% {
+  93% {
     opacity: 0; } }
 @keyframes moon-eclipse {
-  0% {
+  7% {
     opacity: 0; }
   10% {
     opacity: 100; }
   90% {
     opacity: 100; }
-  100% {
+  93% {
     opacity: 0; } }
 
 /*# sourceMappingURL=style.css.map */
